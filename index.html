@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chillout Audio Synthesis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="panel">
+                <div class="row">
+                    <div class="ceil">Tracks</div>
+                    <div class="ceil">Instrument</div>
+                    <div class="ceil">Melody</div>
+                    <div class="ceil">Interval, ms</div>
+                    <div class="ceil">Effect</div>
+                    <div class="ceil">Effect gain</div>
+                    <div class="ceil">Track volume</div>
+                </div>
+                <div class="row">
+                    <div class="ceil">
+                        <button class="play toggle">
+                            <span class="btn-text">Play</span>
+                        </button>
+                    </div>
+                    <div class="ceil">
+                        <div class="select-wrapper">
+                            <select class="instrument">
+                                <option>Piano</option>
+                                <option>Guitar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ceil">
+                        <input type="text" class="melody" readonly>
+                    </div>
+                    <div class="ceil">
+                        <input type="text" class="interval" value="1000" maxlength="6" required>
+                    </div>
+                    <div class="ceil">
+                        <div class="select-wrapper">
+                            <select class="effect">
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ceil">
+                        <input type="range" name="effect_gain" class="effect_gain" min="0" max="10" step="0.01"
+                            value="5">
+                        <output>5.00</output>
+                    </div>
+                    <div class="ceil">
+                        <input type="range" name="volume" class="volume" min="0" max="10" step="0.01" value="5">
+                        <output>5.00</output>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+                <div class="row">
+                    <div class="ceil">
+                        <button class="play toggle">
+                            <span class="btn-text">Play</span>
+                        </button>
+                    </div>
+                    <div class="ceil">
+                        <div class="select-wrapper">
+                            <select class="instrument">
+                                <option>Piano</option>
+                                <option>Guitar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ceil">
+                        <input type="text" class="melody" readonly>
+                    </div>
+                    <div class="ceil">
+                        <input type="text" class="interval" value="1000" minlength="3">
+                    </div>
+                    <div class="ceil">
+                        <div class="select-wrapper">
+                            <select class="effect">
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ceil">
+                        <input type="range" name="effect_gain" class="effect_gain" min="0" max="10" step="0.01"
+                            value="5">
+                        <output>5.00</output>
+                    </div>
+                    <div class="ceil">
+                        <input type="range" name="volume" class="volume" min="0" max="10" step="0.01" value="5">
+                        <output>5.00</output>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+                <div class="row row_last">
+                    <div class="ceil">
+                        <button class="play-all toggle">
+                            <span class="btn-text">All</span>
+                        </button>
+                    </div>
+                    <div class="ceil">
+                        <button id="add">
+                            <span class="input-text">Add track</span>
+                        </button>
+                    </div>
+                    <div class="ceil">
+                        <button id="download">
+                            <a class="link" href="#">
+                                <span class="btn-text">Download</span>
+                            </a>
+                        </button>
+                        <button id="info">Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/bundle.js"></script>
+    <!-- <script src="module.js" type="module"></script> -->
+</body>
+
+</html>
